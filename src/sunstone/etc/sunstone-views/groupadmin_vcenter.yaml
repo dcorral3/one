@@ -13,6 +13,7 @@ enabled_tabs:
     - templates-top-tab
     #- templates-tab
     - oneflow-templates-tab
+    - billing-tab
     #- vrouter-templates-tab
     #- storage-top-tab
     #- datastores-tab
@@ -198,6 +199,9 @@ tabs:
             Acl.create_dialog: true
             Acl.delete: true
     templates-top-tab:
+        panel_tabs:
+        actions:
+    billing-tab:
         panel_tabs:
         actions:
     templates-tab:

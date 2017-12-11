@@ -175,6 +175,7 @@ define(function(require) {
         Table = require('tabs/oneflow-services-tab/datatable');
         break;
       case "oneflow-template":
+      case "billing":
       case "servicetemplate":
         Table = require('tabs/oneflow-templates-tab/datatable');
         break;

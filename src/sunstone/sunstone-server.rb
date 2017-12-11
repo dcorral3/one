@@ -352,7 +352,9 @@ before do
     request.body.rewind
 
     unless %w(/ /login /vnc /spice /version).include?(request.path)
-        halt [401, "csrftoken"] unless authorized? && valid_csrftoken?
+        if !request.path.include?('/billing')
+            halt [401, "csrftoken"] unless authorized? && valid_csrftoken?
+        end
     end
 
     request_vars = {}

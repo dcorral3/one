@@ -34,6 +34,7 @@ enabled_tabs:
     - vdcs-tab
     - acls-tab
     - settings-tab
+    - billing-tab
     - support-tab
     - upgrade-top-tab
     - vmgroup-tab
@@ -72,6 +73,9 @@ features:
     # deployed to
     vcenter_vm_folder: true
 tabs:
+    billing-tab:
+        panel_tabs:
+        actions:
     dashboard-tab:
         # The following widgets can be used inside any of the '_per_row' settings
         # bellow. As the name suggest, the widgets will be scaled to fit one,
@@ -197,6 +201,9 @@ tabs:
             Acl.create_dialog: true
             Acl.delete: true
     templates-top-tab:
+        panel_tabs:
+        actions:
+    billing-tab:
         panel_tabs:
         actions:
     templates-tab:

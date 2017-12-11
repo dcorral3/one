@@ -14,6 +14,7 @@ enabled_tabs:
     - templates-tab
     - oneflow-templates-tab
     - vrouter-templates-tab
+    - billing-tab
     #- storage-top-tab
     #- datastores-tab
     #- images-tab

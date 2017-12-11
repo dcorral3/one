@@ -34,6 +34,7 @@ enabled_tabs:
     - vdcs-tab
     - acls-tab
     - settings-tab
+    - billing-tab
     - support-tab
     - upgrade-top-tab
     - vmgroup-tab
@@ -309,6 +310,9 @@ tabs:
             hybrid: true
             other: true
     instances-top-tab:
+        panel_tabs:
+        actions:
+    billing-tab:
         panel_tabs:
         actions:
     vms-tab:

@@ -30,6 +30,7 @@ define(function(require) {
   _setupDataTableSearch();
 
   var SETTINGS_TAB_ID = require('tabs/settings-tab/tabId');
+  var BILLING_TAB_ID = require('tabs/billing-tab/tabId');
   var PROVISION_TAB_ID = require('tabs/provision-tab/tabId');
   var Sunstone = require('sunstone');
   var Config = require('sunstone-config');

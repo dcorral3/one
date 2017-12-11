@@ -154,6 +154,7 @@ require.config({
         'tabs/vnets-topology-tab',
         'tabs/secgroups-tab',
         'tabs/settings-tab',
+        'tabs/billing-tab',
         'tabs/support-tab',
         'tabs/upgrade-top-tab',
         'tabs/vmgroup-tab'

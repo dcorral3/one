@@ -622,7 +622,7 @@ define(function(require) {
       dataTable.recountCheckboxes();
     }
 
-    var hashRes = ["Dashboard", "Settings", "NetworkTopology"];
+    var hashRes = ["Dashboard", "Settings", "NetworkTopology", "Billing"];
     var res = SunstoneCfg["tabs"][tabName]["resource"];
     if (res) {
       if (!hashRes.includes(res)){
