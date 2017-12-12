@@ -19,7 +19,7 @@ define(function(require) {
   var OpenNebulaUser = require('opennebula/user');
   var Sunstone = require('sunstone');
   var _actions = require('./users-tab/actions');
-  
+
   var TAB_ID = require('./settings-tab/tabId');
 
   _actions["Settings.refresh"] = {

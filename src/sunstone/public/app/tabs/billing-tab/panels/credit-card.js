@@ -15,36 +15,32 @@
 /* -------------------------------------------------------------------------- */
 
 define(function(require) {
-    var Locale = require('utils/locale');
-    var _actions = require('./billing-tab/actions');
-    var _buttons = require('./billing-tab/buttons');
-    var TAB_ID = require('./billing-tab/tabId');
-    var TemplateBilling = require('hbs!./billing-tab/html');
+    /*
+      DEPENDENCIES
+     */
 
-    var _panels = [
-      require('./billing-tab/panels/credit-card'),
-      require('./billing-tab/panels/paypal'),
-    ];
-    //CREAR PROPIO FORM PARA BILLING SOLO TESTING*****
-    var _formPanels = [
-      require('./acls-tab/form-panels/create')
-    ];
+    var BasePanel = require('tabs/users-tab/panels/info-common');
 
-    var Tab = {
-      tabId: TAB_ID,
-      title: Locale.tr("Billing"),
-      listHeader: Locale.tr("Billing"),
-      resource: 'Billing',
-      panels: _panels,
-      buttons: _buttons,
-      actions: _actions,
-      content: _html()
+    /*
+      CONSTANTS
+     */
+
+    var TAB_ID = require('../tabId');
+    var PANEL_ID = require('./credit-card/panelId');
+
+    /*
+      CONSTRUCTOR
+     */
+
+    function Panel(info) {
+      this.tabId = TAB_ID;
+
+      return BasePanel.call(this, info);
     };
 
-    return Tab;
+    Panel.PANEL_ID = PANEL_ID;
+    Panel.prototype = Object.create(BasePanel.prototype);
+    Panel.prototype.constructor = Panel;
 
-    function _html() {
-      return TemplateBilling;
-    }
-
+    return Panel;
   });

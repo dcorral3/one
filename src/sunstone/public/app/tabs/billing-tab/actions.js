@@ -15,36 +15,37 @@
 /* -------------------------------------------------------------------------- */
 
 define(function(require) {
-    var Locale = require('utils/locale');
-    var _actions = require('./billing-tab/actions');
-    var _buttons = require('./billing-tab/buttons');
-    var TAB_ID = require('./billing-tab/tabId');
-    var TemplateBilling = require('hbs!./billing-tab/html');
+    var Sunstone = require("sunstone");
+    // var OpenNebulaAction = require("opennebula/action");
+    var TAB_ID = require("./tabId");
+    //var CREATE_DIALOG_ID = require("./form-panels/create/formPanelId");
+    //var INSTANTIATE_DIALOG_ID = require("./form-panels/instantiate/formPanelId");
+    //var CLONE_DIALOG_ID = require("./dialogs/clone/dialogId");
+    //var XML_ROOT = "DOCUMENT";
+    //var RESOURCE = "ServiceTemplate";
 
-    var _panels = [
-      require('./billing-tab/panels/credit-card'),
-      require('./billing-tab/panels/paypal'),
-    ];
-    //CREAR PROPIO FORM PARA BILLING SOLO TESTING*****
-    var _formPanels = [
-      require('./acls-tab/form-panels/create')
-    ];
+    //var _commonActions = new CommonActions(OpenNebulaResource, RESOURCE, TAB_ID,
+    //  XML_ROOT, Locale.tr("Service Template created"));
 
-    var Tab = {
-      tabId: TAB_ID,
-      title: Locale.tr("Billing"),
-      listHeader: Locale.tr("Billing"),
-      resource: 'Billing',
-      panels: _panels,
-      buttons: _buttons,
-      actions: _actions,
-      content: _html()
+    var _actions = {
+      "Billing.list" : {
+        type: "list",
+        call: function(){
+          alert("REFRESH!! CALL")
+        },//OpenNebulaResource.list,
+        callback: function(){
+          alert("REFRESH!! CALLBACK")
+        }
+      },
+      "Billing.refresh" : {
+        type: "refresh",
+        call: function(){
+          Sunstone.getDIalog
+        },//OpenNebulaResource.list,
+        callback: function(){
+          alert("REFRESH!! CALLBACK")
+        }
+      }
     };
-
-    return Tab;
-
-    function _html() {
-      return TemplateBilling;
-    }
-
+    return _actions;
   });

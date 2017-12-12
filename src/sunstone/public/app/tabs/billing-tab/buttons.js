@@ -16,16 +16,16 @@
 
 define(function(require) {
     var Locale = require('utils/locale');
-
     var Buttons = {
       "Billing.refresh" : {
         type: "action",
         layout: "refresh",
         alwaysActive: true
       },
-      "Billing.create_dialog" : {
-        type: "create_dialog",
-        layout: "create"
+      "Billing.list" : {
+        type: "action",
+        layout: "create",
+        alwaysActive: true
       }
     };
 

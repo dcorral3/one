@@ -315,6 +315,8 @@ tabs:
     billing-tab:
         panel_tabs:
         actions:
+            billing.list: true
+            billing.create_dialog: true
     vms-tab:
         panel_tabs:
             vm_info_tab: true

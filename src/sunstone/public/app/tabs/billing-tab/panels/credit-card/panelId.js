@@ -14,37 +14,6 @@
 /* limitations under the License.                                             */
 /* -------------------------------------------------------------------------- */
 
-define(function(require) {
-    var Locale = require('utils/locale');
-    var _actions = require('./billing-tab/actions');
-    var _buttons = require('./billing-tab/buttons');
-    var TAB_ID = require('./billing-tab/tabId');
-    var TemplateBilling = require('hbs!./billing-tab/html');
-
-    var _panels = [
-      require('./billing-tab/panels/credit-card'),
-      require('./billing-tab/panels/paypal'),
-    ];
-    //CREAR PROPIO FORM PARA BILLING SOLO TESTING*****
-    var _formPanels = [
-      require('./acls-tab/form-panels/create')
-    ];
-
-    var Tab = {
-      tabId: TAB_ID,
-      title: Locale.tr("Billing"),
-      listHeader: Locale.tr("Billing"),
-      resource: 'Billing',
-      panels: _panels,
-      buttons: _buttons,
-      actions: _actions,
-      content: _html()
-    };
-
-    return Tab;
-
-    function _html() {
-      return TemplateBilling;
-    }
-
-  });
+define(function(require){
+    return 'billing_credit_card_tab';
+  })
